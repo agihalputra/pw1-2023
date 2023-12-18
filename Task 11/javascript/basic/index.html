@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic JS</title>
+  </head>
+  <body>
+    <!-- Html Code -->
+    <p id="dinoName"></p>
+
+    <input type="number" id="age" min="1">
+    <button onclick="getStatus()">Check</button>
+
+    <p id="status"></p>
+
+    <script>
+      let dinoName = "Tricera";
+      
+
+      document.getElementById("dinoName").innerHTML = `Dino name is ${dinoName}`;
+
+    function getStatus() {
+        let dinoAge= document.getElementById("age").value;
+
+        if (dinoAge < 800) {
+            return document.getElementById("status").innerHTML = "Belum Cukup Umur";
+        }
+        else if (dinoAge > 800) {
+            return document.getElementById("status").innerHTML = "Sudah Dewasa";
+        }
+        else {
+            return document.getElementById("status").innerHTML = "Pass";
+        }
+        }
+      
+    </script>
+  </body>
+</html>
